@@ -1,10 +1,11 @@
+drop index if exists ix_auth_username;
 drop table if exists my_authorities;
 drop table if exists my_users;
 
 create table my_users(
     username varchar(50) not null,
     password varchar(255) not null,
-    enabled int not null,
+    enabled boolean not null,
     primary key (username)
 );
 
